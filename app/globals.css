@@ -86,4 +86,35 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  /* Global CSS file (e.g., global.css) */
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-purple-700 {
+  scrollbar-color: #3c0a65 #22093d; /* thumb color followed by track color */
+}
+
+.scrollbar-track-purple-300 {
+  scrollbar-color: #72558a #441774; /* same as above to ensure track color applies */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #a856eb; /* purple-700 */
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #d8b4fe; /* purple-300 */
+}
+
 }
