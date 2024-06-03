@@ -31,16 +31,6 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="absolute top-4 right-3 z-20">
-        <MagicButton
-          title="Download Resume"
-          icon={<GoDownload />}
-          position="left"
-          handleClick={handleDownload}
-          otherClasses="!bg-[#161A31]"
-        />
-      </div>
-
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
           <Image
@@ -57,7 +47,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center relative my-20 z-10">
+      <div className="flex flex-col items-center relative my-20 z-10 space-y-6">
         <div className="flex items-center md:gap-3 gap-6 mb-6">
           {socialMedia.map((info) => (
             <a href={info.link} key={info.id} target="_blank" rel="noopener noreferrer">
@@ -67,14 +57,24 @@ const Hero = () => {
             </a>
           ))}
         </div>
-        
-        <a href="#about">
+
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
           <MagicButton
-            title="Show my work"
-            icon={<FaLocationArrow />}
+            title="Download Resume"
+            icon={<GoDownload />}
             position="right"
+            handleClick={handleDownload}
+            otherClasses="text-lg"
           />
-        </a>
+          <a href="#about">
+            <MagicButton
+              title="Show my work"
+              icon={<FaLocationArrow />}
+              position="right"
+              otherClasses="text-lg"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
