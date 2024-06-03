@@ -37,7 +37,7 @@ const Resume = () => {
       </h1>
       <div className="mb-4">
         <MagicButton
-          title={"Download or View"}
+          title={"Download Resume"}
           icon={<GoDownload />}
           position="left"
           handleClick={handleDownload}

@@ -1,13 +1,26 @@
-import React from 'react'
-import { Spotlight } from './ui/Spotlight'
-import { TextGenerateEffect } from './ui/text-generate'
-import Image from 'next/image'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
+'use client';
+import React from 'react';
+import { Spotlight } from './ui/Spotlight';
+import { TextGenerateEffect } from './ui/text-generate';
+import Image from 'next/image';
+import MagicButton from './ui/MagicButton';
+import { FaLocationArrow } from 'react-icons/fa';
+import { GoDownload } from 'react-icons/go';
+import { socialMedia } from '@/data';
 
 const Hero = () => {
+  const handleDownload = () => {
+    const resumeUrl = 'https://drive.google.com/file/d/1Qu5NhW6QNHGytwb85r8XWvjf-WrGmV6i/view?usp=sharing';
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.setAttribute('download', 'resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <div className="pb-20 pt-36 relative"id ="home">
+    <div className="pb-20 pt-36 relative" id="home">
       <div>
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
         <Spotlight className="h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
@@ -16,6 +29,16 @@ const Hero = () => {
 
       <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      </div>
+
+      <div className="absolute top-4 right-3 z-20">
+        <MagicButton
+          title="Download Resume"
+          icon={<GoDownload />}
+          position="left"
+          handleClick={handleDownload}
+          otherClasses="!bg-[#161A31]"
+        />
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
@@ -33,15 +56,28 @@ const Hero = () => {
           />
         </div>
       </div>
-        <div className='flex justify-center relative my-20 z-10'>
-      <a href="#about" > <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            /> </a>
+
+      <div className="flex flex-col items-center relative my-20 z-10">
+        <div className="flex items-center md:gap-3 gap-6 mb-6">
+          {socialMedia.map((info) => (
+            <a href={info.link} key={info.id} target="_blank" rel="noopener noreferrer">
+              <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                <img src={info.img} alt="icons" width={20} height={20} />
+              </div>
+            </a>
+          ))}
+        </div>
+        
+        <a href="#about">
+          <MagicButton
+            title="Show my work"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
       </div>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

@@ -1,3 +1,4 @@
+'use client';
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import{ FloatingNav }from "@/components/ui/FloatingNav";
@@ -20,9 +21,6 @@ export default function Home() {
         <Grid />
         <RecentProjects />
         <Experience />
-        
-        <Resume />
-
         <Approach />
         <Footer />
        
