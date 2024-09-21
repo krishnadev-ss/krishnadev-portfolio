@@ -165,7 +165,7 @@ export const navItems = [
   export const socialMedia = [
     {
       id: 1,
-      img: "/git.svg",
+      img: "/20240908_103451.jpg",
       link: "https://github.com/krishnadev-ss",
     },
     {
