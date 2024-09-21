@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
           <Image
-            src="/mine.png"
+            src="/20240908_103451.jpg"
             alt="profile"
             width={250}
             height={250}

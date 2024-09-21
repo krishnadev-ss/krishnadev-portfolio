@@ -138,22 +138,30 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
+      title: "Associate Software Engineer",
+      Organization: "Organization: EY",
+      desc: "DevOps Engineer",
+      className: "md:col-span-2",
+      thumbnail: "/ey-logo-black.jpg",
+    },
+    {
+      id: 2,
       title: "Cybersecurity Intern",
-      Organization: "Organiztion: Kerala Police",
+      Organization: "Organization: Kerala Police",
       desc: "Assisted in the development of a web-based platform using React.js for analyzing CDR data.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
-      id: 2,
+      id: 3,
       title: "Web Designer Intern",
-      Organization: "Organiztion: Keltron",
+      Organization: "Organization: Keltron",
       desc: "Designed a web site for a client, from initial concept using Figma and got knowledge on Wordpress for small projects.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/exp2.svg",
     },
     {
-      id: 3,
+      id: 4,
       title: "Freelance App Dev Project",
       desc: "Led the dev of a web site for a client, from initial concept.",
       className: "md:col-span-2", // change to md:col-span-2
@@ -165,7 +173,7 @@ export const navItems = [
   export const socialMedia = [
     {
       id: 1,
-      img: "/20240908_103451.jpg",
+      img: "/git.svg",
       link: "https://github.com/krishnadev-ss",
     },
     {
