@@ -10,7 +10,7 @@ import { socialMedia } from '@/data';
 
 const Hero = () => {
   const handleDownload = () => {
-    const resumeUrl = 'https://drive.google.com/file/d/1Qu5NhW6QNHGytwb85r8XWvjf-WrGmV6i/view?usp=sharing';
+    const resumeUrl = 'https://drive.google.com/file/d/1kURawMZWZHkINY_0O3cAAOFob4MJB54W/view?usp=sharing';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.setAttribute('download', 'resume.pdf');
